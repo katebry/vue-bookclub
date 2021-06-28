@@ -11,7 +11,10 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Book",
-  props: ["title", "rating"],
+  props: {
+    title: String,
+    rating: String,
+  },
   data: function () {
     return {
       ratingsVisible: false,
