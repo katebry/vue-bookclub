@@ -1,6 +1,6 @@
 <template>
   <h2>{{ bookTitle }}</h2>
-  <button @click="toggleRatings">Show Ratings</button>
+  <button @click="toggleRatings">{{ratingsVisible ? 'Hide Average Rating' : 'Show Average Rating' }}</button>
   <h1 v-if="this.ratingsVisible">10/10</h1>
 </template>
 
