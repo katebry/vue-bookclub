@@ -24,3 +24,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+button {
+  background-color: #42b983;
+}
+</style>
