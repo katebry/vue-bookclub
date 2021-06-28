@@ -1,9 +1,9 @@
 <template>
-  <h2>{{ bookTitle }}</h2>
+  <h2>{{ title }}</h2>
   <button @click="toggleRatings">
     {{ ratingsVisible ? "Hide Average Rating" : "Show Average Rating" }}
   </button>
-  <h1 v-if="this.ratingsVisible">{{ bookRating }}</h1>
+  <h1 v-if="this.ratingsVisible">{{ rating }}</h1>
 </template>
 
 <script lang="ts">
@@ -14,8 +14,6 @@ export default defineComponent({
   props: ["title", "rating"],
   data: function () {
     return {
-      bookTitle: this.title,
-      bookRating: this.rating,
       ratingsVisible: false,
     };
   },
