@@ -1,7 +1,9 @@
 <template>
   <h2>{{ bookTitle }}</h2>
-  <button @click="toggleRatings">{{ratingsVisible ? 'Hide Average Rating' : 'Show Average Rating' }}</button>
-  <h1 v-if="this.ratingsVisible">10/10</h1>
+  <button @click="toggleRatings">
+    {{ ratingsVisible ? "Hide Average Rating" : "Show Average Rating" }}
+  </button>
+  <h1 v-if="this.ratingsVisible">{{ bookRating }}</h1>
 </template>
 
 <script lang="ts">
@@ -9,11 +11,11 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Book",
-  props: {
-    bookTitle: String,
-  },
+  props: ["title", "rating"],
   data: function () {
     return {
+      bookTitle: this.title,
+      bookRating: this.rating,
       ratingsVisible: false,
     };
   },

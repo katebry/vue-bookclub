@@ -1,6 +1,6 @@
 <template>
   <Title msg="Book Club" />
-  <Book bookTitle="Nevada" />
+  <Book title="Nevada" rating= "5/10" />
 </template>
 
 <script lang="ts">
