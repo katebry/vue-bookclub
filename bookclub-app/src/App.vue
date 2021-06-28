@@ -1,15 +1,18 @@
 <template>
   <Title msg="Book Club" />
+  <Book bookTitle="Nevada" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Title from "./components/Title.vue";
+import Book from "./components/Book.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     Title,
+    Book,
   },
 });
 </script>
