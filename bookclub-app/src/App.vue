@@ -1,6 +1,9 @@
 <template>
   <Title msg="Book Club" />
-  <Book title="Nevada" rating= "5/10" />
+  <Book title="Nevada" rating="4.5/10" />
+  <Book title="One Day in the Life of Ivan Denisovich" rating="7.4/10" />
+  <Book title="Stonefish" rating="3.9/10" />
+  <Book title="The Haunting of Hill House" rating="8.4/10" />
 </template>
 
 <script lang="ts">
