@@ -4,12 +4,19 @@
     {{ ratingsVisible ? "Hide Average Rating" : "Show Average Rating" }}
   </button>
   <h1 v-if="this.ratingsVisible">{{ rating }}</h1>
+  <p v-if="this.ratingsVisible">
+    <Ratings :scores="scores" />
+  </p>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Ratings from "./Ratings.vue";
 
 export default defineComponent({
+  components: {
+    Ratings,
+  },
   name: "Book",
   props: {
     title: {
@@ -20,6 +27,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    scores: Object,
   },
   data: function () {
     return {
